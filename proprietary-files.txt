@@ -1,0 +1,43 @@
+# Audio ACBD
+etc/acdbdata/Bluetooth_cal.acdb
+etc/acdbdata/General_cal.acdb
+etc/acdbdata/Global_cal.acdb
+etc/acdbdata/Handset_cal.acdb
+etc/acdbdata/Hdmi_cal.acdb
+etc/acdbdata/Headset_cal.acdb
+etc/acdbdata/Speaker_cal.acdb
+
+# Bluetooth
+bin/hci_qcomm_init
+bin/BCM4339_003.001.009.0105.0458_LGE_G3L_SPRINT_FM_ORC.hcd:vendor/firmware/BCM4335_003.001.009.0105.0458_LGE_G3L_SPRINT_FM_ORC.hcd
+
+# Radio
+bin/netmgrd
+bin/rmt_storage
+lib/libvss_common_core.so
+lib/libvss_nv_core.so
+lib/libvss_resim_core.so
+vendor/lib/libril-qc-qmi-1.so
+
+# Sensors
+bin/sensors.qcom
+etc/sensors/sensor_def_variable.conf
+vendor/lib/libsensor1.so
+
+# Thermal
+vendor/bin/thermal-engine
+
+# Venus (media) firmware
+etc/firmware/venus.b00
+etc/firmware/venus.b01
+etc/firmware/venus.b02
+etc/firmware/venus.b03
+etc/firmware/venus.b04
+etc/firmware/venus.mbn
+etc/firmware/venus.mdt
+
+# WiFi
+etc/firmware/fw_bcmdhd.bin
+etc/firmware/fw_bcmdhd_apsta.bin
+etc/firmware/fw_bcmdhd_mfg.bin
+etc/wifi/bcmdhd.cal

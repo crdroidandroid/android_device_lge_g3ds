@@ -21,7 +21,6 @@ vendor/lib/libril-qc-qmi-1.so
 
 # Sensors
 bin/sensors.qcom
-etc/sensors/sensor_def_variable.conf
 vendor/lib/libsensor1.so
 
 # Thermal

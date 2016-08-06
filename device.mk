@@ -33,8 +33,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # FM
 PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
+    #FMRadio \
+    #libfmjni
 
 # GPS
 PRODUCT_COPY_FILES += \

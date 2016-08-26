@@ -1,6 +1,6 @@
 # Radio
 ro.telephony.call_ring.multiple=0
-ro.telephony.default_network=20
+ro.telephony.default_network=20,1
 ro.telephony.ril_class=LgeLteRIL
 telephony.lteOnCdmaDevice=0
 telephony.lteOnGsmDevice=1

@@ -20,8 +20,8 @@
 TARGET_OTA_ASSERT_DEVICE := g3,d856,d857,d858,d858hk,d859
 
 # Bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/lge/d857/bluetooth/vnd_g3.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d857/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/lge/g3ds/bluetooth/vnd_g3.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/g3ds/bluetooth
 BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Audio
@@ -43,13 +43,13 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/lge/d857/rootdir/etc/fstab.g3
+TARGET_RECOVERY_FSTAB := device/lge/g3ds/rootdir/etc/fstab.g3
 
 # NFC
 BOARD_NFC_CHIPSET := pn547
 
 # RIL
-BOARD_RIL_CLASS += ../../../device/lge/d857/ril
+BOARD_RIL_CLASS += ../../../device/lge/g3ds/ril
 
 # Vendor Init
 TARGET_INIT_VENDOR_LIB := libinit_g3ds
@@ -73,4 +73,4 @@ AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # inherit from the proprietary version
--include vendor/lge/d857/BoardConfigVendor.mk
+-include vendor/lge/g3ds/BoardConfigVendor.mk

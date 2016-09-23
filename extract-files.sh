@@ -2,6 +2,6 @@
 
 set -e
 
+export DEVICE=g3ds
 export VENDOR=lge
-export DEVICE=d857
 ./../../$VENDOR/g3-common/extract-files.sh $@

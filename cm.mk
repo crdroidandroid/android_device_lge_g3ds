@@ -1,4 +1,4 @@
-$(call inherit-product, device/lge/d857/full_d857.mk)
+$(call inherit-product, device/lge/g3ds/full_g3ds.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
@@ -6,7 +6,7 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Enhanced NFC
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
-PRODUCT_NAME := cm_d857
+PRODUCT_NAME := cm_g3ds
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="g3"

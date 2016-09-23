@@ -48,6 +48,9 @@ TARGET_RECOVERY_FSTAB := device/lge/d857/rootdir/etc/fstab.g3
 # NFC
 BOARD_NFC_CHIPSET := pn547
 
+# RIL
+BOARD_RIL_CLASS += ../../../device/lge/d857/ril
+
 # Vendor Init
 TARGET_INIT_VENDOR_LIB := libinit_g3ds
 TARGET_RECOVERY_DEVICE_MODULES := libinit_g3ds

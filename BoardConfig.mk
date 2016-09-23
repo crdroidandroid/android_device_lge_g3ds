@@ -17,7 +17,7 @@
 # inherit from common g3
 -include device/lge/g3-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := g3,d856,d857,d858,d859
+TARGET_OTA_ASSERT_DEVICE := g3,d856,d857,d858,d858hk,d859
 
 # Bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/lge/d857/bluetooth/vnd_g3.txt
@@ -47,6 +47,11 @@ TARGET_RECOVERY_FSTAB := device/lge/d857/rootdir/etc/fstab.g3
 
 # NFC
 BOARD_NFC_CHIPSET := pn547
+
+# Vendor Init
+TARGET_INIT_VENDOR_LIB := libinit_g3ds
+TARGET_RECOVERY_DEVICE_MODULES := libinit_g3ds
+TARGET_UNIFIED_DEVICE := true
 
 # Wifi
 BOARD_WLAN_DEVICE := bcmdhd

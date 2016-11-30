@@ -29,7 +29,7 @@ AUDIO_FEATURE_ENABLED_FM := true
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_g3dual_defconfig
+TARGET_KERNEL_CONFIG := crdroid_dualsim_defconfig
 TARGET_REQUIRES_BUMP := true
 
 # Partitions

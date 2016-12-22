@@ -17,16 +17,12 @@
 # inherit from common g3
 -include device/lge/g3-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := g3,d856,d857,d858,d858hk,d859
+TARGET_OTA_ASSERT_DEVICE := g3,g3ds,d856,d857,d858,d858hk,d859
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/g3ds/bluetooth
 BOARD_CUSTOM_BT_CONFIG := device/lge/g3ds/bluetooth/vnd_g3.txt
 BOARD_HAVE_BLUETOOTH_BCM := true
-
-# Audio
-AUDIO_FEATURE_ENABLED_FM := true
-AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_g3dual_defconfig
@@ -67,10 +63,6 @@ WIFI_DRIVER_FW_PATH_P2P := "/system/etc/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/bcmdhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_STA := "/system/etc/firmware/fw_bcmdhd.bin"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-
-#FM Radio
-AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
-TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # inherit from the proprietary version
 -include vendor/lge/g3ds/BoardConfigVendor.mk

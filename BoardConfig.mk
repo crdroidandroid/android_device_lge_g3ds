@@ -20,8 +20,8 @@
 TARGET_OTA_ASSERT_DEVICE := g3,d856,d857,d858,d858hk,d859
 
 # Bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/lge/g3ds/bluetooth/vnd_g3.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/g3ds/bluetooth
+BOARD_CUSTOM_BT_CONFIG := device/lge/g3ds/bluetooth/vnd_g3.txt
 BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Audio

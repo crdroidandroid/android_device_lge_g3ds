@@ -31,6 +31,11 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# RIL
+PRODUCT_PACKAGES += \
+    init.target.rc \
+    ril_shim
+
 # FM
 PRODUCT_PACKAGES += \
     #FMRadio \

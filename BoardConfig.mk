@@ -39,7 +39,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/lge/g3ds/rootdir/etc/fstab.g3
+TARGET_RECOVERY_FSTAB := device/lge/g3ds/rootdir/etc/fstab.recovery
 
 # NFC
 BOARD_NFC_CHIPSET := pn547

@@ -43,6 +43,7 @@ TARGET_RECOVERY_FSTAB := device/lge/g3ds/rootdir/etc/fstab.g3
 
 # NFC
 BOARD_NFC_CHIPSET := pn547
+BOARD_NFC_HAL_SUFFIX := msm8974
 
 # RIL
 BOARD_RIL_CLASS += ../../../device/lge/g3ds/ril

@@ -33,8 +33,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # RIL
 PRODUCT_PACKAGES += \
-    init.target.rc \
-    ril_shim
+    librmnetctl
 
 # FM
 PRODUCT_PACKAGES += \

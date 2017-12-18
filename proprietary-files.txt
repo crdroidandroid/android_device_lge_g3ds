@@ -40,7 +40,6 @@ bin/rmt_storage
 etc/data/dsi_config.xml
 etc/data/netmgr_config.xml
 -lib/libmdmdetect.so
-lib/libril.so
 lib/libuicc.so
 lib/libvss_common_idl.so
 lib/libvss_common_iface.so

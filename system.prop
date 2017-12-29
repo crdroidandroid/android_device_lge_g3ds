@@ -1,5 +1,14 @@
-# Radio
-rild.libpath=/vendor/lib/libril-qc-qmi-1.so
-ro.telephony.call_ring.multiple=0
-ro.multisim.set_audio_params=true
-persist.radio.multisim.config=dsda
+# RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
+    ril.subscription.types=NV,RUIM \
+    ro.baseband.arch=msm \
+    ro.data.large_tcp_window_size=true \
+    ro.ril.hsupa.category=6 \
+    ro.ril.def.agps.mode=1 \
+    ro.telephony.call_ring.multiple=false \
+    ro.use_data_netmgrd=true \
+    persist.data.netmgrd.qos.enable=true \
+    persist.radio.apm_sim_not_pwdn=1 \
+    persist.radio.jbims=1 \
+    DEVICE_PROVISIONED=1

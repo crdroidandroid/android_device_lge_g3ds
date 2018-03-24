@@ -25,7 +25,7 @@ BOARD_CUSTOM_BT_CONFIG := device/lge/g3ds/bluetooth/vnd_g3.txt
 BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_g3dual_defconfig
+TARGET_KERNEL_CONFIG := lineageos_dualsim_defconfig
 TARGET_REQUIRES_BUMP := true
 
 # Partitions
@@ -53,7 +53,6 @@ TARGET_RIL_VARIANT := caf
 # Vendor Init
 TARGET_INIT_VENDOR_LIB := libinit_g3ds
 TARGET_RECOVERY_DEVICE_MODULES := libinit_g3ds
-TARGET_UNIFIED_DEVICE := true
 
 # Wifi
 BOARD_WLAN_DEVICE := bcmdhd

@@ -40,12 +40,22 @@
 using android::base::GetProperty;
 using android::init::property_set;
 
+void property_override(char const prop[], char const value[])
+{
+    prop_info *pi;
+
+    pi = (prop_info*) __system_property_find(prop);
+    if (pi)
+        __system_property_update(pi, value, strlen(value));
+    else
+        __system_property_add(prop, strlen(prop), value, strlen(value));
+}
+
 void cdma_properties()
 {
     property_set("ro.telephony.default_cdma_sub", "0");
     property_set("ro.telephony.default_network", "10,1");
     property_set("ro.telephony.get_imsi_from_sim", "true");
-    property_set("ro.telephony.ril_class", "D859RIL");
     property_set("telephony.lteOnCdmaDevice", "1");
 }
 
@@ -72,38 +82,33 @@ void vendor_load_properties()
     if (serialno == "D856") {
         /* CIS */
         gsm_properties("9,1");
-
-        property_set("ro.build.description", "g3_open_cis-user 6.0 MRA58K 16228163339a2 release-keys");
-        property_set("ro.build.fingerprint", "lge/g3_open_cis/g3:6.0/MRA58K/16228163339a2:user/release-keys");
-        property_set("ro.product.model", "LG-D856");
+        property_override("ro.build.description", "g3_open_cis-user 6.0 MRA58K 16228163339a2 release-keys");
+        property_override("ro.build.fingerprint", "lge/g3_open_cis/g3:6.0/MRA58K/16228163339a2:user/release-keys");
+        property_override("ro.product.model", "LG-D856");
     } else if (serialno == "D857") {
         /* CHINA_OPEN_LTE */
         gsm_properties("20,1");
-
-        property_set("ro.build.description", "g3_open_cn-user 5.0.1 LRX22G 152311653f5c9 release-keys");
-        property_set("ro.build.fingerprint", "lge/g3_open_cn/g3:5.0.1/LRX22G/152311653f5c9:user/release-keys");
-        property_set("ro.product.model", "LG-D857");
+        property_override("ro.build.description", "g3_open_cn-user 5.0.1 LRX22G 152311653f5c9 release-keys");
+        property_override("ro.build.fingerprint", "lge/g3_open_cn/g3:5.0.1/LRX22G/152311653f5c9:user/release-keys");
+        property_override("ro.product.model", "LG-D857");
     } else if (serialno == "D858HK") {
         /* HONGKONG */
         gsm_properties("20,1");
-
-        property_set("ro.build.description", "g3_open_hk-user 6.0 MRA58K 160331641f312 release-keys");
-        property_set("ro.build.fingerprint", "lge/g3_open_hk/g3:6.0/MRA58K/160331641f312:user/release-keys");
-        property_set("ro.product.model", "LG-D858HK");
+        property_override("ro.build.description", "g3_open_hk-user 6.0 MRA58K 160331641f312 release-keys");
+        property_override("ro.build.fingerprint", "lge/g3_open_hk/g3:6.0/MRA58K/160331641f312:user/release-keys");
+        property_override("ro.product.model", "LG-D858HK");
     } else if (serialno == "D858") {
         /* CHINA_MOBILE_LTE */
         gsm_properties("20,1");
-
-        property_set("ro.build.description", "g3_cmcc_cn-user 5.0.1 LRX22G 1523117098b82 release-keys");
-        property_set("ro.build.fingerprint", "lge/g3_cmcc_cn/g3:5.0.1/LRX22G/1523117098b82:user/release-keys");
-        property_set("ro.product.model", "LG-D858");
+        property_override("ro.build.description", "g3_cmcc_cn-user 5.0.1 LRX22G 1523117098b82 release-keys");
+        property_override("ro.build.fingerprint", "lge/g3_cmcc_cn/g3:5.0.1/LRX22G/1523117098b82:user/release-keys");
+        property_override("ro.product.model", "LG-D858");
     } else if (serialno == "D859") {
        /* CHINA_TELECOM_LTE */
         cdma_properties();
-
-        property_set("ro.build.description", "g3_ctc_cn-user 5.0.1 LRX22G 152311713704b release-keys");
-        property_set("ro.build.fingerprint", "lge/g3_ctc_cn/g3:5.0.1/LRX22G/152311713704b:user/release-keys");
-        property_set("ro.product.model", "LG-D859");
+        property_override("ro.build.description", "g3_ctc_cn-user 5.0.1 LRX22G 152311713704b release-keys");
+        property_override("ro.build.fingerprint", "lge/g3_ctc_cn/g3:5.0.1/LRX22G/152311713704b:user/release-keys");
+        property_override("ro.product.model", "LG-D859");
     } 
 
     device = GetProperty("ro.product.device", "");

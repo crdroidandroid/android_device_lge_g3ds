@@ -22,6 +22,11 @@ PRODUCT_COPY_FILES += \
     device/lge/g3-common/configs/audio/audio_platform_info_bcm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     device/lge/g3-common/configs/audio/mixer_paths_bcm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
+# Init
+PRODUCT_PACKAGES += \
+    init.g3ds.rc \
+    init.class_main.sh
+
 # NFC
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml

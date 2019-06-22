@@ -1,0 +1,26 @@
+service qcom-c_core-sh /vendor/bin/sh vendor/bin/init.qcom.class_core.sh
+    class core
+    user root
+    oneshot
+
+service qcom-c_main-sh /vendor/bin/sh vendor/bin/init.class_main.sh
+    class main
+    user root
+    oneshot
+
+on property:vold.decrypt=trigger_restart_framework
+    start qcom-c_main-sh
+
+service ril-daemon2 /vendor/bin/hw/rild -c 2
+    class main
+    user radio
+    disabled
+    group radio cache inet misc audio sdcard_r sdcard_rw oem_2950 log net_raw
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+
+service ril-daemon3 /vendor/bin/hw/rild -c 3
+    class main
+    user radio
+    disabled
+    group radio cache inet misc audio sdcard_r sdcard_rw oem_2950 log net_raw
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW

@@ -28,7 +28,9 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 TARGET_EXFAT_DRIVER := sdfat
 
 # Kernel
+KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/gcc/linux-x86/arm/arm-linaro-linux-androideabi/bin
 TARGET_KERNEL_CONFIG := lineageos_dualsim_defconfig
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linaro-linux-androideabi-
 TARGET_REQUIRES_BUMP := true
 
 # Partitions

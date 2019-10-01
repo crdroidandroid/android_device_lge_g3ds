@@ -29,6 +29,7 @@ TARGET_EXFAT_DRIVER := sdfat
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_dualsim_defconfig
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 TARGET_REQUIRES_BUMP := true
 
 # Partitions

@@ -15,3 +15,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_g3ds.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_g3ds-userdebug \
+    lineage_g3ds-eng \
+    lineage_g3ds-user

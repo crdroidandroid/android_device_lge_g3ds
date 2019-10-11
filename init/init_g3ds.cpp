@@ -74,13 +74,8 @@ void gsm_properties(char const default_network[])
 void vendor_load_properties()
 {
 
-    std::string platform;
     std::string serialno;
     std::string device;
-
-    platform = GetProperty("ro.board.platform", "");
-    if (platform != ANDROID_TARGET)
-        return;
 
     serialno = GetProperty("ro.boot.serialno", "");
 

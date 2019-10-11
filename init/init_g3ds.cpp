@@ -51,8 +51,9 @@ void property_override(char const prop[], char const value[])
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void property_override_dual(char const system_prop[], char const vendor_prop[], char const value[])
+void property_override_triple(char const product_prop[], char const system_prop[], char const vendor_prop[], char const value[])
 {
+    property_override(product_prop, value);
     property_override(system_prop, value);
     property_override(vendor_prop, value);
 }
@@ -83,37 +84,37 @@ void vendor_load_properties()
         /* CIS */
         gsm_properties("9,1");
         property_override("ro.build.description", "g3_open_cis-user 6.0 MRA58K 16228163339a2 release-keys");
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "lge/g3_open_cis/g3:6.0/MRA58K/16228163339a2:user/release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "LG-D856");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "lg_d856");
+        property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "lge/g3_open_cis/g3:6.0/MRA58K/16228163339a2:user/release-keys");
+        property_override_triple("ro.product.model", "ro.product.system.model", "ro.product.vendor.model", "LG-D856");
+        property_override_triple("ro.product.device", "ro.product.system.device", "ro.product.vendor.device", "lg_d856");
     } else if (serialno == "D857") {
         /* CHINA_OPEN_LTE */
         gsm_properties("20,1");
         property_override("ro.build.description", "g3_open_cn-user 5.0.1 LRX22G 152311653f5c9 release-keys");
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "lge/g3_open_cn/g3:5.0.1/LRX22G/152311653f5c9:user/release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "LG-D857");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "lg_d857");
+        property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "lge/g3_open_cn/g3:5.0.1/LRX22G/152311653f5c9:user/release-keys");
+        property_override_triple("ro.product.model", "ro.product.system.model", "ro.product.vendor.model", "LG-D857");
+        property_override_triple("ro.product.device", "ro.product.system.device", "ro.product.vendor.device", "lg_d857");
     } else if (serialno == "D858HK") {
         /* HONGKONG */
         gsm_properties("20,1");
         property_override("ro.build.description", "g3_open_hk-user 6.0 MRA58K 160331641f312 release-keys");
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "lge/g3_open_hk/g3:6.0/MRA58K/160331641f312:user/release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "LG-D858HK");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "lg_d858hk");
+        property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "lge/g3_open_hk/g3:6.0/MRA58K/160331641f312:user/release-keys");
+        property_override_triple("ro.product.model", "ro.product.system.model", "ro.product.vendor.model", "LG-D858HK");
+        property_override_triple("ro.product.device", "ro.product.system.device", "ro.product.vendor.device", "lg_d858hk");
     } else if (serialno == "D858") {
         /* CHINA_MOBILE_LTE */
         gsm_properties("20,1");
         property_override("ro.build.description", "g3_cmcc_cn-user 5.0.1 LRX22G 1523117098b82 release-keys");
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "lge/g3_cmcc_cn/g3:5.0.1/LRX22G/1523117098b82:user/release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "LG-D858");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "lg_d858");
+        property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "lge/g3_cmcc_cn/g3:5.0.1/LRX22G/1523117098b82:user/release-keys");
+        property_override_triple("ro.product.model", "ro.product.system.model", "ro.product.vendor.model", "LG-D858");
+        property_override_triple("ro.product.device", "ro.product.system.device", "ro.product.vendor.device", "lg_d858");
     } else if (serialno == "D859") {
        /* CHINA_TELECOM_LTE */
         cdma_properties();
         property_override("ro.build.description", "g3_ctc_cn-user 5.0.1 LRX22G 152311713704b release-keys");
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "lge/g3_ctc_cn/g3:5.0.1/LRX22G/152311713704b:user/release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "LG-D859");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "lg_d859");
+        property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "lge/g3_ctc_cn/g3:5.0.1/LRX22G/152311713704b:user/release-keys");
+        property_override_triple("ro.product.model", "ro.product.system.model", "ro.product.vendor.model", "LG-D859");
+        property_override_triple("ro.product.device", "ro.product.system.device", "ro.product.vendor.device", "lg_d859");
     } 
 
     device = GetProperty("ro.product.device", "");

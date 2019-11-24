@@ -48,9 +48,6 @@ TARGET_RECOVERY_FSTAB := device/lge/g3ds/rootdir/etc/fstab.g3
 BOARD_NFC_CHIPSET := pn547
 BOARD_NFC_HAL_SUFFIX := msm8974
 
-# SELinux
-BOARD_SEPOLICY_DIRS += device/lge/g3ds/sepolicy
-
 # Vendor Init
 TARGET_INIT_VENDOR_LIB := libinit_g3ds
 TARGET_RECOVERY_DEVICE_MODULES := libinit_g3ds

@@ -43,10 +43,6 @@ PRODUCT_PACKAGES += \
     #FMRadio \
     #libfmjni
 
-# GPS
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
-
 # Wifi
 PRODUCT_PACKAGES += \
     libnetcmdiface
